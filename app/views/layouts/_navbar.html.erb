@@ -1,0 +1,15 @@
+<header>
+  <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+    <div class="flex items-center justify-center"> <!-- Added justify-center class -->
+      <%= link_to root_path, class: "flex items-center" do %>
+        <%= image_tag "q9.png", class: "w-1/2 q9_logo" %>
+      <% end %>
+    </div>
+
+    <nav>
+      <ul class="flex">
+        <li class="ml-auto"><%= link_to "Blog", blog_posts_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>

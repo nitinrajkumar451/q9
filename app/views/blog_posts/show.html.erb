@@ -1,0 +1,20 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+    <div class="flex justify-end mt-2">
+      <%= link_to "Edit", edit_blog_post_path(@blog_post), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" if user_signed_in?%>      
+    </div>
+    <%= image_tag @blog_post.cover_image if @blog_post.cover_image.present? %>
+
+    <div class="flex h-screen">
+
+      <div class=" p-8">
+        <h1 class="text-2xl font-bold mb-4"><%= @blog_post.title %></h1>
+        <p class="text-gray-700 text-lg mb-4"><%= @blog_post.content %></p>
+
+      </div>
+    </div>
+
+</div>
